@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# .vimrc
-# .gitexcludes
-# .gitconfig
-# .bash_git
-
 if [ -f ~/.bash_git ]; then
 	. ~/.bash_git
 fi

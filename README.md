@@ -14,10 +14,7 @@ This is a shell configuration for Linux and OSX. This will make some changes:
    name = [Your name]
    email = [Your email]
 ```
-- Edit the bash profile adding this code at end of file. Usually is **.bashrc** or **.bash_profile**
+- Select a file to install (Usually is **.bashrc**, **.bash_profile** or **.profile**). Ex:
 ```shell
-# LOAD CODEGIK PROFILE
-if [ -f ~/.codegik_profile ]; then
-  . ~/.codegik_profile
-fi
+./install /home/codegik/.bash_profile
 ```

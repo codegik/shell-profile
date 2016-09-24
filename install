@@ -1,0 +1,29 @@
+#!/bin/sh
+
+if [ "$#" -ne 1 ]; then
+	echo "Usage: $0 <file>" >&2
+    exit 1
+fi
+
+TARGET=~
+cp .bash_git $TARGET/
+cp .codegik_profile $TARGET/
+cp .gitconfig $TARGET/
+cp .gitexcludes $TARGET/
+cp .vimrc $TARGET/
+
+if [ -f $1 ]; then
+	echo "" >> $1
+	echo "" >> $1
+	echo "# Load codegik profile" >> $1
+	echo "if [ -f ~/.codegik_profile ]; then" >> $1
+  	echo "	. ~/.codegik_profile" >> $1
+  	echo "fi" >> $1
+	
+	exit 0
+fi
+
+echo "File $1 does not exists"
+exit 1
+
+
