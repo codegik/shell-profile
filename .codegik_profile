@@ -17,7 +17,7 @@ alias df='df -h'
 alias grep='grep --color'
 alias egrep='egrep --color'
 alias fgrep='fgrep --color'
-
+alias javaDebug='java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n'
 
 # COLORS
 Color_Off="\[\033[0m\]"       # Text Reset
