@@ -6,7 +6,7 @@ fi
 
 
 # some more ls aliases
-alias ls='ls -Gh'
+alias ls='ls -h --color'
 alias l='ls -l'
 alias ll='ls -la'
 alias ..='cd ..'
