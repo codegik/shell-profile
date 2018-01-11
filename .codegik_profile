@@ -6,6 +6,18 @@ if [ -f ~/.bash_git ]; then
 	. ~/.bash_git
 fi
 
+# functions
+function mvnSettings {
+  if [ "$#" -gt 0 ]; then
+    echo "coping settings-$1.xml"
+    cp ~/.m2/settings-$1.xml ~/.m2/settings.xml
+  else
+    echo "removing settings.xml"
+    rm -rf ~/.m2/settings.xml
+  fi
+  echo "Done"
+}
+
 
 # some more ls aliases
 if [ "$OS" == "Linux" ]; then
@@ -27,7 +39,6 @@ alias fgrep='fgrep --color'
 alias javaDebug='java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n'
 alias dockerStopAll='docker stop $(docker ps -a -q)'
 alias dockerRemoveAll='docker rm $(docker ps -a -q)'
-
 
 # COLORS
 Color_Off="\[\033[0m\]"       # Text Reset
