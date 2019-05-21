@@ -26,6 +26,7 @@ else
 	alias ls='ls -h -G'
 fi
 
+alias ls='lsd'
 alias l='ls -l'
 alias ll='ls -la'
 alias ..='cd ..'
